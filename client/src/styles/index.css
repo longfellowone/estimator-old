@@ -1,9 +1,5 @@
 @tailwind base;
 
-.divtesting {
-    background: green;
-}
- 
 @tailwind components;
 
-@tailwind utilities; 
+@tailwind utilities;
