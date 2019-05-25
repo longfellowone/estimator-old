@@ -1,0 +1,9 @@
+@tailwind base;
+
+.divtesting {
+    background: blue;
+}
+ 
+@tailwind components;
+
+@tailwind utilities; 
