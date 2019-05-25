@@ -1,0 +1,38 @@
+interface Node {
+  id: ID!
+}
+
+type Query {
+  orders(projectId: String, after: String, first: Int, before: String, last: Int): OrderConnection
+  # projects: (after: String, first: Int, before: String, last: Int): ProjectConnection # get org ID from context
+  node(id: ID!): Node
+}
+
+type Order implements Node {
+  id: ID!
+  project: Project!
+  items: [String!]!
+}
+
+type OrderConnection {
+  pageInfo: PageInfo!
+  edges: [OrderEdge]
+}
+
+type OrderEdge {
+  node: Order
+  cursor: String!
+}
+
+type Project implements Node {
+  id: ID!
+  name: String!
+  # orders: OrderConnection
+}
+
+type PageInfo {
+  hasNextPage: Boolean!
+  hasPreviousPage: Boolean!
+  startCursor: String
+  endCursor: String
+}
