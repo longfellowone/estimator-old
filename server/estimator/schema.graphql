@@ -2,6 +2,15 @@ interface Node {
   id: ID!
 }
 
+ type Query {
+   node(id: ID!): Node
+ }
+
+ type Project implements Node {
+   id: ID!
+   name: String!
+ }
+
 # type Query {
 #   orders(projectId: String, after: String, first: Int, before: String, last: Int): OrderConnection
 #   # projects: (after: String, first: Int, before: String, last: Int): ProjectConnection # get org ID from context

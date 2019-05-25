@@ -1,0 +1,17 @@
+schema:
+- schema.graphql
+
+exec:
+  filename: gql_gen.go
+
+model:
+  filename: models/models_gen.go
+  package: models
+
+resolver:
+  filename: resolverDELETE.go
+  type: Resolver
+
+#models:
+#  Order:
+#    model: field/supply.Order
