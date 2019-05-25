@@ -1,7 +1,7 @@
 @tailwind base;
 
 .divtesting {
-    background: blue;
+    background: green;
 }
  
 @tailwind components;
