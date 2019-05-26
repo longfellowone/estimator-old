@@ -1,17 +1,19 @@
+<button class="py-2 px-4 shadow-md no-underline rounded-full bg-blue text-white font-sans font-semibold text-sm border-blue btn-primary hover:text-white hover:bg-blue-light focus:outline-none active:shadow-none mr-2">Primary</button>
+
 return errors.Wrap(err, "request failed")
- 
+
 realize start
-Scrollbar on hover 
+Scrollbar on hover
 
 div {
-  height: 100px;
-  width: 50%;
-  margin: 0 auto;
-  overflow: hidden;
+height: 100px;
+width: 50%;
+margin: 0 auto;
+overflow: hidden;
 }
 
 div:hover {
-  overflow-y: scroll;
+overflow-y: scroll;
 }
 
 SELECT i.id, i.title, array_agg(i.title)
@@ -46,10 +48,10 @@ https://programmingwithmosh.com/net/common-mistakes-with-the-repository-pattern/
 defer tx.Rollback()
 
 public interface BusinessRuleGateway {
-  Something getSomething(String id);
-  void startTransaction();
-  void saveSomething(Something thing);
-  void endTransaction();
+Something getSomething(String id);
+void startTransaction();
+void saveSomething(Something thing);
+void endTransaction();
 }
 
 //open transaction and set in participants
@@ -61,37 +63,37 @@ err0 := ur.Keep(userData)
 err1 := ir.Keep(imageData)
 //decision
 if err0 != nil || err1 != nil {
-  tx.Rollback()
-  return
+tx.Rollback()
+return
 }
 tx.Commit()
 
 // https://medium.com/squad-engineering/blazingly-fast-querying-on-huge-tables-by-avoiding-joins-5be0fca2f523
 WITH user_ids AS
-  (SELECT id
-   FROM user
-   WHERE account_id IN
-       (SELECT generate_series(1,1000)))
+(SELECT id
+FROM user
+WHERE account_id IN
+(SELECT generate_series(1,1000)))
 SELECT purchase.id
 FROM purchase
 WHERE user_id IN
-    (SELECT id
-     FROM user_ids);
-     
+(SELECT id
+FROM user_ids);
+  
 /////
 SELECT
-  album.id as album_id,
-  album.title as album_title,
-  track.id as track_id,
-  track.title as track_title
+album.id as album_id,
+album.title as album_title,
+track.id as track_id,
+track.title as track_title
 FROM
-  album
+album
 LEFT OUTER JOIN
-  track
+track
 ON
-  (album.id = track.album_id)
+(album.id = track.album_id)
 WHERE
-  album.year = 2018
+album.year = 2018
 ////
 
 SELECT TOP(5) ProductID, SUM(Quantity) AS TotalQuantity
@@ -104,7 +106,6 @@ https://hackernoon.com/how-to-work-with-databases-in-golang-33b002aa8c47
 
 // mongo paginate
 https://github.com/saeedghx68/fast-relay-pagination/blob/6eb6af05ae96df174fd18b220e7904ef69648e9a/src/index.js
-
 
 ////////////////////////////////// REACT
 
@@ -122,7 +123,6 @@ https://medium.com/@johan.friedrich.pro/use-usetoaster-to-toast-toasts-a-hot-how
 
 https://medium.com/octopus-wealth/skeleton-loading-pages-with-react-5a931f12677b
 https://www.npmjs.com/package/react-content-loader
-
 
 gql filtering
 https://spectrum.chat/graphql/general/list-filtering-api-examples~e1fc941e-1fdc-4b41-bb9d-89c9f3a8a596
